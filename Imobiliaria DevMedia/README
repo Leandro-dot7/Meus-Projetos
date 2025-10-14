@@ -1,0 +1,19 @@
+# 🏡 Imobiliária Imobiliária Santos - Landing Page
+
+Uma landing page simples e responsiva para a Imobiliária Imobiliária Santos, projetada para, apresentar a empresa, mostrar os principais serviços, informação sobre nossa equipe de corretores e contato de forma clara e direta.
+
+## 🚀 Tecnologias Utilizadas
+
+Este projeto foi desenvolvido com foco na simplicidade e desempenho, utilizando apenas:
+
+| Tecnologia | Versão/Nota |
+| :--- | :--- |
+| **HTML5** | Estrutura semântica do conteúdo. |
+| **CSS3** | Estilização, layout e responsividade. |
+
+Não foram utilizadas linguagens de script (JavaScript) ou frameworks.
+
+## 🌟 Destaque do Projeto: Localização
+
+O elemento mais "complexo" do projeto é a seção de localização, que utiliza um `<iframe>` para incorporar um mapa interativo (por exemplo, do Google Maps) mostrando a localização da imobiliária ou a área de atuação.
+
