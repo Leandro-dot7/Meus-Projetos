@@ -1,0 +1,74 @@
+🤖 NLW Agents - Assistência de Meta
+Este projeto é uma ferramenta web que funciona como um especialista assistente de meta para diversos jogos de eSports. Ele utiliza a API Gemini da Google para fornecer respostas concisas e atualizadas sobre estratégias, builds e dicas para os jogos selecionados.
+
+    Tecnologias e Funcionalidades
+O projeto é uma aplicação single page baseada em HTML, CSS e JavaScript puro (Vanilla JS).
+
+	
+Backbone --	HTML5 & CSS3 --	Estrutura e estilização, incluindo um design responsivo e efeitos de animação (@keyframes apper e pulse).
+
+Interação -- JavaScript (Vanilla JS) -- Lógica da aplicação, manipulação do DOM e a chamada assíncrona para a API Gemini.
+
+API -- Google Gemini -- Usado o modelo gemini-2.0-flash com a ferramenta de Google Search (tools: [{ google_search: {} }]) ativada para garantir respostas atualizadas sobre o meta atual dos jogos.
+Formatação -- Showdown.js -- Biblioteca externa (<script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>) utilizada para converter as respostas formatadas em Markdown da IA para HTML.
+
+
+    Jogos Suportados
+A interface permite que o usuário selecione o contexto da pergunta, informando à IA qual jogo ela deve considerar:
+
+CS2
+Dota2
+League of Legends (LOL)
+World of Warcraft (WOW)
+
+    Lógica de Inteligência Artificial
+A função principal, perguntarAI, envia um prompt robusto ao modelo Gemini, que atua como um "especialista assistente de meta" para o jogo selecionado.
+
+As Regras de Resposta da IA incluem:
+
+Especialidade: Responder com base no conhecimento do jogo, estratégias, builds e dicas.
+
+Atualização: Considerar a data atual e realizar pesquisas atualizadas sobre o patch vigente (via Google Search Tool).
+
+Limitação: Responder com 'Não sei' se a resposta for desconhecida, ou 'Essa pergunta não está relacionada ao jogo' se o tópico for irrelevante.
+
+Formato: Ser direto, responder em Markdown e ter no máximo 500 caracteres.
+
+    Instalação e Execução
+Para rodar este projeto localmente, siga os passos abaixo:
+Clone o Repositório:
+git clone https://www.youtube.com/watch?v=xtwls2XmJUI
+
+Navegue até a pasta do projeto:
+cd [nome-da-pasta-do-projeto]
+
+    Execute:
+Abra o arquivo index.html em seu navegador. Como não há backend ou ambiente de servidor complexo, um duplo clique no arquivo é suficiente.
+
+    Requisito Chave: API Key
+Para interagir com a API Gemini, você deve:
+
+Obter uma API Key no Google AI Studio.
+Inserir a chave no campo "Informe a API KEY do Gemini" da aplicação.
+
+A chave é usada na função perguntarAI para construir a URL de requisição (https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=[API_KEY]).
+
+⚙️ Configuração (script.js)
+O arquivo script.js gerencia toda a interatividade:
+
+MarkdownToHTML(text): Converte o texto da resposta da IA de Markdown para HTML, usando a biblioteca Showdown.js. Inclui um fallback simples caso a biblioteca não carregue.
+
+PerguntarAI(...): Função assíncrona que monta o prompt complexo, chama a API Gemini     via fetch, e retorna o texto da resposta.
+
+SendForm(event): Lida com o envio do formulário, valida os campos, desabilita o botão e exibe a resposta da IA na área #airesponse.
+
+    Estilização (style.css)
+O design da aplicação possui um tema dark (escuro) e eSports, com:
+
+Fundo: Imagem (./assets/bg.jpg) com cor de fallback (#121214).
+
+Fontes: Fonte 'Inter' importada do Google Fonts.
+
+Gradiente Destaque: Uso de gradientes (#9572fc 0%, #43e7ad 50%, #e2d45c 100%) para elementos como a seção principal e o botão.
+
+Animação de Carregamento: O botão de envio exibe um efeito de pulsação (@keyframes pulse) quando a requisição está em andamento.
