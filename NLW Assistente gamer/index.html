@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Garante que a página seja responsiva em dispositivos móveis -->
+    <title>NLW Agents</title>
+    <!-- Título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Importa o arquivo de estilos CSS -->
+</head>
+
+<!-- Pré-conexão para otimizar o carregamento das fontes do Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Importa a fonte 'Inter' do Google Fonts -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+<body>
+    <header>
+        <!-- Logo do projeto -->
+        <img src="./assets/logo.png" alt="Logo esports NLW">
+    </header>
+    <main>
+        <section>
+            <div>
+                <h2 class="title">Assistencia de meta</h2>
+                <!-- Título da seção -->
+                <p> Pergunte sobre estratégias, builds e dicas para seus jogos!</p>
+                <!-- Descrição da funcionalidade -->
+                <form id="form">
+                    <!-- Campo para inserir a API KEY do Gemini -->
+                    <input id="apiKey" type="password" placeholder="Informe a API KEY do Gemini" required>
+                    <!-- Seleção do jogo desejado -->
+                    <select id="gameselect">
+                        <option value="">Selecione um game</option>
+                        <option value="CS2"> CS2</option>
+                        <option value="Dota">Dota2</option>
+                        <option value="LOL">League of Legends</option>
+                        <option value="WOW">World of Warcraft</option>
+                    </select>
+                    <!-- Campo para digitar a pergunta -->
+                    <input id="questioninput" type="text" placeholder="Ex:Melhor flash fundo do mapa dust 2..." required>
+                    <!-- Botão para enviar a pergunta -->
+                    <button id="askbutton">
+                        Perguntar
+                    </button>
+                </form>
+                <!-- Área onde a resposta da IA será exibida -->
+                <div id="airesponse">
+                    <div class="response-content"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Biblioteca para converter Markdown em HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+    <!-- Script principal da aplicação -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
