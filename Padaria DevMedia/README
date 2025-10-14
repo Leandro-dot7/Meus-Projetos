@@ -1,0 +1,53 @@
+🍞 Padaria Plus - Website Institucional
+Este é um website simples e estático, criado para apresentar a Padaria Plus, seus produtos em destaque e informações de contato. O projeto foca em uma estrutura HTML limpa e estilização CSS básica, sendo ideal para um projeto inicial de apresentação.
+
+🚀 Tecnologias Utilizadas
+Este projeto é um site estático puro e utiliza apenas as tecnologias fundamentais da web:
+
+Tecnologia	   Finalidade
+HTML5	       Estruturação e organização semântica do conteúdo.
+CSS3	       Estilização, cores e layout, centralizando o conteúdo principal.
+
+
+Não há uso de JavaScript, frameworks, ou bibliotecas externas.
+
+🎯 Estrutura do Conteúdo
+O site é organizado em seções distintas, acessíveis por meio de links de âncora no menu superior:
+
+Menu de Navegação: Exibe o logotipo da padaria e links para as seções Sobre, Produtos e Contato.
+
+Seção Sobre (#sobre): Apresenta um título e subtítulo de destaque e uma imagem de banner dos produtos.
+
+Seção Produtos (#produtos): Uma seção de destaque com fundo em cor sólida, detalhando a qualidade dos Pães e Bolos.
+
+Seção Contato (#contato): Fornece o endereço (Avenida  Agoz Nº 000), telefone e horários de funcionamento.
+
+🎨 Estilo e Layout
+O arquivo estilo.css define um layout simples com foco em tipografia e cores que remetem a uma padaria:
+
+Layout: O conteúdo principal (.secao) é fixado em 700px de largura e centralizado na página.
+
+Cor de Fundo: O fundo da página (body) utiliza a cor #f4f0e5.
+
+Cores de Destaque: A cor #de8e37 (um tom de laranja/dourado) é usada para subtítulos (h2), bordas separadoras e como fundo na seção de produtos (.secao-destaque).
+
+Tipografia: A fonte padrão é Tahoma.
+
+🛠️ Como Executar
+Por ser um site estático, a execução é extremamente simples:
+
+Baixe ou Clone o projeto.
+
+Abra o arquivo index.html em qualquer navegador web (Chrome, Firefox, Edge, etc.).
+
+Não é necessário configurar um servidor web local.
+
+📂 Estrutura de Arquivos
+.
+├── index.html        # Estrutura principal da página.
+├── estilo.css        # Arquivo de estilos CSS.
+└── img/              # Pasta para imagens.
+    ├── logo.png      # Logotipo da padaria.
+    ├── produtos-padaria.jpg # Imagem de banner.
+    ├── paes.jpg      # Imagem de pães.
+    └── bolos.jpg     # Imagem de bolos.
